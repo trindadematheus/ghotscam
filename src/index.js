@@ -14,6 +14,7 @@ const createWindow = () => {
 
   const browserWidth = 440;
   const browserHeight = 260;
+  let isGhostModeActive = true;
 
   const mainWindow = new BrowserWindow({
     width: browserWidth,
@@ -36,6 +37,18 @@ const createWindow = () => {
   const tray = new Tray(iconPath);
 
   const contextMenu = Menu.buildFromTemplate([
+    {
+      label: "Ghost Mode",
+      type: "checkbox",
+      checked: isGhostModeActive,
+      click: () => {
+        mainWindow.setIgnoreMouseEvents(!isGhostModeActive);
+        isGhostModeActive = !isGhostModeActive;
+      },
+    },
+    {
+      type: "separator",
+    },
     {
       label: "Position",
       type: "submenu",
