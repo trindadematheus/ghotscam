@@ -117,10 +117,16 @@ const createWindow = () => {
           label: "0.5x",
           type: "normal",
           click: () => {
+            const newWidth = browserWidth * 0.5;
+            const newHeight = browserHeight * 0.5;
+
             mainWindow.setBounds({
-              width: browserWidth * 0.5,
-              height: browserHeight * 0.5,
+              width: newWidth,
+              height: newHeight,
+              x: 10,
+              y: 10,
             });
+
             mainWindow.reload();
           },
         },
@@ -128,10 +134,16 @@ const createWindow = () => {
           label: "1x",
           type: "normal",
           click: () => {
+            const newWidth = browserWidth;
+            const newHeight = browserHeight;
+
             mainWindow.setBounds({
-              width: browserWidth,
-              height: browserHeight,
+              width: newWidth,
+              height: newHeight,
+              x: 10,
+              y: 10,
             });
+
             mainWindow.reload();
           },
         },
@@ -139,10 +151,16 @@ const createWindow = () => {
           label: "1.5x",
           type: "normal",
           click: () => {
+            const newWidth = browserWidth * 1.5;
+            const newHeight = browserHeight * 1.5;
+
             mainWindow.setBounds({
-              width: browserWidth * 1.5,
-              height: browserHeight * 1.5,
+              width: newWidth,
+              height: newHeight,
+              x: 10,
+              y: 10,
             });
+
             mainWindow.reload();
           },
         },
