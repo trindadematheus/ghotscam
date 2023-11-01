@@ -4,6 +4,11 @@
   overflow: hidden;
 }
 
+html,
+body {
+  background-color: #111;
+}
+
 video {
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
