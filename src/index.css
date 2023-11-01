@@ -1,0 +1,10 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+}
+
+video {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
