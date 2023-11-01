@@ -17,6 +17,7 @@ const createWindow = () => {
     y: 10,
     alwaysOnTop: true,
     resizable: false,
+    icon: path.join(__dirname, "..", "icon.png"),
     webPreferences: {
       preload: path.join(__dirname, "preload.js"),
     },
